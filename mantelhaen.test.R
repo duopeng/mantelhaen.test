@@ -5,7 +5,7 @@ if(!require(grid)){install.packages("grid")}
 if(!require(vcd)){install.packages("vcd")}
 
 
-#Extended Fig. 5e
+#Extended Data Fig. 5e
 sperm_assay <-
   array(c(17, 16, 2, 6,
           19, 6, 19, 2,
@@ -22,7 +22,7 @@ sperm_assay
 mantelhaen.test(sperm_assay)
 
 
-#Extended Fig. 5f (top)
+#Extended Data Fig. 5f (top)
 #ds2181 (dsEcK2) injection before feed 
 ovi_assay_inj_feed <-
   array(c(2, 8, 16, 9,
@@ -55,7 +55,7 @@ ovi_assay_inj_feed
 mantelhaen.test(ovi_assay_inj_feed)
 
 
-#Extended Fig. 5f bottom
+#Extended Data Fig. 5f bottom
 #ds2181 (dsEcK2) feed before injection
 ovi_assay_feed_inj <-
   array(c(0, 0, 31, 36,
