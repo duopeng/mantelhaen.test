@@ -5,8 +5,7 @@ if(!require(grid)){install.packages("grid")}
 if(!require(vcd)){install.packages("vcd")}
 
 
-#Figure 5b
-#ds2181 (dsEcK2) feed before injection
+#Extended Fig. 5e
 sperm_assay <-
   array(c(17, 16, 2, 6,
           19, 6, 19, 2,
@@ -23,7 +22,22 @@ sperm_assay
 mantelhaen.test(sperm_assay)
 
 
-#Figure 5c top
+#Extended Fig. 5f (top)
+#ds2181 (dsEcK2) injection before feed 
+ovi_assay_inj_feed <-
+  array(c(2, 8, 16, 9,
+          2, 10, 32, 21,
+          3, 8, 20, 14,
+          0, 6, 42, 25),
+        dim = c(2, 2, 4),
+        dimnames = list(
+          dsRNA = c("dsGFP", "ds2181"),
+          Response = c("ovi", "No_ovi"),
+          rep = c("1", "2", "3", "4")))
+#check the matrix array
+ovi_assay_inj_feed
+# Cochran-Mantel-Haenszel test
+mantelhaen.test(ovi_assay_inj_feed)
 #ds2181 (dsEcK2) injection before feed 
 ovi_assay_inj_feed <-
   array(c(2, 8, 16, 9,
@@ -41,7 +55,7 @@ ovi_assay_inj_feed
 mantelhaen.test(ovi_assay_inj_feed)
 
 
-#Figure 5c bottom
+#Extended Fig. 5f bottom
 #ds2181 (dsEcK2) feed before injection
 ovi_assay_feed_inj <-
   array(c(0, 0, 31, 36,
